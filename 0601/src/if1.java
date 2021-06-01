@@ -292,10 +292,10 @@ public class if1 {
 		int num = Integer.parseInt(input);		// 문자구조를 숫자형태로 바꿀 수 있다	//  int형 정수로 변환
 		
 		int revers = 0;
-//		 12345 -> 54321
-//		 num			revers
-//		 456789   987654
-		
+////		 12345 -> 54321
+////		 num			revers
+////		 456789   987654
+//		
 		while(num != 0 ) {
 			revers += num % 10; 
 			num /= 10;		
@@ -315,7 +315,6 @@ public class if1 {
 //			num /= 10;
 //		}
 //		System.out.println(revers);
-		
 		
 		
 		
