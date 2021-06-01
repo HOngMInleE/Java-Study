@@ -19,9 +19,9 @@ public class java연산자 {
 //			String str4 = new String("abc");
 //			
 //			System.out.println(str3 == str4); // false / 객체(변수)를 비교해서 (주소값을 비교해서) / 다르게 인식
-			
-			
-//		&&, ||, ! 
+			 
+			  
+//		&&, ||, !             
 			
 //		true && true // true
 //		true && false // false 
