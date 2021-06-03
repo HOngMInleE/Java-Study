@@ -50,15 +50,60 @@ public class Calc {
 
 // 가변형 메소드
 	// 매개변수 값에 제한 없음, 배열구조로 처리됨
-		public int sum(int ... values) { 
-			int sum = 0;
-			
-			for(int num : values) {
-				sum += num;
-			}
-			
-			return sum;
-		}
+//		public int sum(int ... values) { 
+//			int sum = 0;
+//			
+//			for(int num : values) {
+//				sum += num;
+//			}
+//			
+//			return sum;
+//		}
+	
+	
+// 오버로딩
+	// 1. 메소드의 이름이 같아야 한다.
+	// 2. 단 매개변수의 타입 또는 갯수가 달라야한다.
+	
+	void add() {
+		System.out.println(5 + 7);
+	}
+	
+	void add(int x) { 
+		System.out.println(x);
+	}
+	
+	// 오버로딩 예외조건
+//	int add(int x) { // return 값이 다르지만 이름이 같은 값이라고 판단해서 오버로딩x
+//		
+//	}
+	
+	void add(double x) { // 매개변수의 / 타입을 다르게.
+		System.out.println(x);
+	}
+	
+	void add(int x,int y) {// 갯수를 다르게
+		System.out.println(x);
+	}
+	
+	
+	
+	void add(int x,long y) {
+		
+	}
+	
+	void add(long x,int y) { // 서로 타입이 다르게
+		
+	}
+	
+//	add(10L,20) // 타입을 맞춰서 호출해줌으로써 누구를 호출할지 구분함.
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

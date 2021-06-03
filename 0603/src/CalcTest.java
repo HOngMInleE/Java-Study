@@ -16,11 +16,11 @@ public class CalcTest {
 //		
 //		c.add4(100, 200);
 		
-		int s1 = c.sum(1,2,3);
-		System.out.println(s1);
-		
-		int s2 = c.sum(1,2,3,4,5,6,7);
-		System.out.println(s2);
+//		int s1 = c.sum(1,2,3);
+//		System.out.println(s1);
+//		
+//		int s2 = c.sum(1,2,3,4,5,6,7);
+//		System.out.println(s2);
 		
 		
 		
