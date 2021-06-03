@@ -24,6 +24,29 @@ public class Car {
 		model = m;
 	}
 
+	
+	
+	
+	
 	// 메소드(기능)
 
+	void KeyTurnOn() {
+		System.out.println("시동을 걸다.");
+	}
+	
+	void KeyTurnOff() {
+		System.out.println("시동을 끄다.");
+	}
+	
+	void Accel() {
+		for (int i=0; i <200; i++) {
+			speed = i;
+			System.out.println(speed);
+		}
+	}
+	
+	
+	
+	
+	
 }
