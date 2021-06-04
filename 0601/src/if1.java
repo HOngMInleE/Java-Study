@@ -283,13 +283,13 @@ public class if1 {
 //		System.out.println(sum);
 
 // 예제2
-//		Scanner sc = new Scanner (System.in);
-//		System.out.println("숫자형태로 문자를 입력");
+		Scanner sc = new Scanner (System.in);
+		System.out.println("숫자형태로 문자를 입력");
+		
+		String input = sc.nextLine();
+		int num = Integer.parseInt(input);		// 문자구조를 숫자형태로 바꿀 수 있다	//  int형 정수로 변환
 //		
-//		String input = sc.nextLine();
-//		int num = Integer.parseInt(input);		// 문자구조를 숫자형태로 바꿀 수 있다	//  int형 정수로 변환
-//		
-//		int revers = 0;
+		int revers = 0;
 ////		 12345 -> 54321
 ////		 num			revers
 ////		 456789   987654
@@ -302,14 +302,14 @@ public class if1 {
 //		System.out.println(revers / 10);
 
 //선생님이랑 같이 한 것 
-//		while(num != 0 ) {
-//			revers =(revers * 10) + (num % 10); 
-//								// 0  * 10 + 5(나머지) -> 5
-//								// 5  * 10 + 4 -> 54
-//								// 54 * 10 + 3 -> 543
-//			num /= 10;		
-//		}
-//		System.out.println(revers);
+		while(num != 0 ) {
+			revers =(revers * 10) + (num % 10); 
+								// 0  * 10 + 5(나머지) -> 5
+								// 5  * 10 + 4 -> 54
+								// 54 * 10 + 3 -> 543
+			num /= 10;		
+		}
+		System.out.println(revers);
 
 //		int a = 10;
 //		 a *= 10;
@@ -343,40 +343,40 @@ public class if1 {
 
 // ex 07)
 
-		boolean run = true;
-
-		int balance = 0;
-
-		int select = 0; // 추가한것
-
-		Scanner scanner = new Scanner(System.in);
-
-		while (true) {
-			System.out.println("------------------------------------");
-			System.out.println("1.예금 | 2.출금 | 3.잔고 | 4.종료");
-			System.out.println("------------------------------------");
-			System.out.print("선택>");
-
-			// 작성 위치
-			select = scanner.nextInt();
-
-			if (select == 1) {
-				System.out.println("예금액>");
-				balance += scanner.nextInt(); // 입력한 금액만큼 추가
-			} else if (select == 2) {
-				System.out.println("출금액>");
-				balance -= scanner.nextInt(); // 입력한 금액만큼 차감
-			} else if (select == 3) {
-//				if (balance < 0) {
-//					System.out.println("잔고가 부족합니다.");
-//					run = false;
-//				}
-				System.out.println("잔고>" + balance);
-			} else {
-				break; // break
-			}
-		}
-		System.out.println("프로그램 종료");
+//		boolean run = true;
+//
+//		int balance = 0;
+//
+//		int select = 0; // 추가한것
+//
+//		Scanner scanner = new Scanner(System.in);
+//
+//		while (true) {
+//			System.out.println("------------------------------------");
+//			System.out.println("1.예금 | 2.출금 | 3.잔고 | 4.종료");
+//			System.out.println("------------------------------------");
+//			System.out.print("선택>");
+//
+//			// 작성 위치
+//			select = scanner.nextInt();
+//
+//			if (select == 1) {
+//				System.out.println("예금액>");
+//				balance += scanner.nextInt(); // 입력한 금액만큼 추가
+//			} else if (select == 2) {
+//				System.out.println("출금액>");
+//				balance -= scanner.nextInt(); // 입력한 금액만큼 차감
+//			} else if (select == 3) {
+////				if (balance < 0) {
+////					System.out.println("잔고가 부족합니다.");
+////					run = false;
+////				}
+//				System.out.println("잔고>" + balance);
+//			} else {
+//				break; // break
+//			}
+//		}
+//		System.out.println("프로그램 종료");
 
 	}
 
