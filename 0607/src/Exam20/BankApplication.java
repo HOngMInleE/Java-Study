@@ -160,9 +160,41 @@ public class BankApplication {
 			
 			if(account == null) {
 				System.out.println("계좌가 개설되지 않았습니다.");
-			}else {				
-				account.setBalance(account.getBalance() - money);
-				System.out.println("내 계좌: " + money + " 로 이체가 성공되었습니다.");
+				return;
+			}else {	
+//				System.out.println("출금이 완료 되었습니다.");
+			}
+			
+			System.out.println("입금 하실 계좌 번호: ");
+			String ano2 = scanner.next();
+			Account account2 = findAccount(ano2);
+			if(account == null || account2 == null) {
+				System.out.println("결과: 계좌 번호를 확인하세요.");
+			} else {
+				account2.setBalance(account2.getBalance() + money);
+				System.out.println("내 계좌에서: " + ano2 + " 로" + money + " 이체가 성공되었습니다.");
 			}
 		}
+		
+		
+// 가변형으로 바꾸기
+		
+		private  static Account[] findAccount(String ...ano) {
+			
+			
+			
+			
+			return null;
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 }
