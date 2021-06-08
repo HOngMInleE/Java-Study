@@ -8,6 +8,7 @@ public class CellPhone {
 	
 // 생성자
 	
+	// 기본생성자 존재
 	
 // 메소드
 	void powerOn() {

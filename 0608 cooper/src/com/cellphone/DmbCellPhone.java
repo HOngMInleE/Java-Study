@@ -8,6 +8,7 @@ public class DmbCellPhone extends CellPhone {
 	
 // 생성자
 	public DmbCellPhone(String model, String color, int channel) {
+		super(); // 부모 생성자를 호출 / 없으면 기본생성자를 호출
 		this.channel = channel;
 		this.model = model;
 		this.color = color;

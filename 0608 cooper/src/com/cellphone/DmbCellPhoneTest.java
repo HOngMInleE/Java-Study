@@ -6,6 +6,7 @@ public class DmbCellPhoneTest {
 		
 	// DmbCellPhone 객체 생성
 		DmbCellPhone dmbCellPhone = new DmbCellPhone("자바폰", "검정", 10);
+								// () = 생성자 호출 / 객체를 생성할 때 반드시 해야함.
 		
 	// CellPhone 으로부터 상속받은 필드
 		System.out.println("모델: " + dmbCellPhone.model);
