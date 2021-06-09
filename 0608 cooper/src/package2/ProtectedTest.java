@@ -11,6 +11,7 @@ public class ProtectedTest {
 	// super
 	// final 
 	// protected
+	// 다형성(형변환)
 
 		
 		Bpack bp = new Bpack();
