@@ -9,7 +9,7 @@ public class Tire {
 	
 	
 // 생성자
-	public Tire(String location, int maxRotation) {
+		public Tire(String location, int maxRotation) {
 		this.location = location;
 		this.maxRotation = maxRotation;
 	}
@@ -17,7 +17,7 @@ public class Tire {
 	
 // 메소드
 	public boolean roll() {
-		++accumulatedRotation;	// 누적 회전수 1 증가	// 증감연산자의 위치에 따른 차이점 https://dojang.io/mod/page/view.php?id=96   
+		++accumulatedRotation;	 
 		if (accumulatedRotation < maxRotation) {
 			System.out.println(location + " Tire 수명: " + 
 					(maxRotation-accumulatedRotation) + "회");
