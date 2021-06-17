@@ -13,32 +13,41 @@ public class FileException {
 		String fileName = sc.nextLine();
 
 		try {
+			
 			File f = createFile(fileName);
+			System.out.println("파일 생성 완료");
+			
 		} catch (IOException e) {
-			System.out.println("파일 생성에 문제가 있습니다.");
+			System.out.println(e.getMessage());
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
 
-		System.out.println("파일 생성 완료");
 	}
 
-	public static File createFile(String fileName) throws IOException {
+	public static File createFile(String fileName) throws IOException, Exception {
 
-		try {
+//		try {
+		
 			if (fileName == null || fileName.equals("")) {
 				throw new Exception("파일의 이름이 유효하지 않습니다.");
 			}
-		} catch (Exception e) {
-			fileName = "제목 없음.txt";
-		} finally { // 예외가 발생하둔 안하든 실행됨.
+			
+//		} catch (Exception e) {
+//			fileName = "제목 없음.txt";
+//		} finally { // 예외가 발생하둔 안하든 실행됨.
+			
 			File f = new File(fileName);
 
 //			try {
+			
 			f.createNewFile(); // File 클래스 안에 이미 정의가 되어있는 메소드
+			
 //			} catch (IOException e) {
 //				System.out.println("파일 생성에 문제가 있습니다.");
 //			}
 			return f;
-		}
+//		}
 
 	}
 
