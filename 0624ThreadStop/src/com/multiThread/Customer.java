@@ -16,24 +16,18 @@ public class Customer implements Runnable {
 	public void run() {
 		while(true) {
 			try {
-				Thread.sleep(20);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				
 			}
 			
 			String name = Thread.currentThread().getName();
+		
+			table.remove(food);
+			System.out.println(name + " 음식을 먹었습니다.");
 			
-			if(eatFood()) {
-				System.out.println(name + " 음식을 먹었습니다.");
-			}else {
-				System.out.println(name + " 음식을 못 먹었습니다.");
-			}
 			
 		}
-	}
-
-	boolean eatFood() {
-		return table.remove(food);
 	}
 	
 
