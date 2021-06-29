@@ -15,7 +15,7 @@ public class BoxTest {
 		box2.set(6);
 		int value = box2.get();
 		
-		System.out.println(value);
+		System.out.println(value); // 6
 				
 		
 		
