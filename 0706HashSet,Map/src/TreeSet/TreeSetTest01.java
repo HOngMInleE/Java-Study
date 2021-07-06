@@ -1,0 +1,22 @@
+package TreeSet;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class TreeSetTest01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Set<Integer> set = new TreeSet<>();
+		
+		for (int i = 0; set.size() < 6; i++) {
+			int num = (int) (Math.random() * 45 ) + 1;
+			set.add(num);
+		}
+		
+		System.out.println(set);
+		
+	}
+
+}
