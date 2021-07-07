@@ -39,8 +39,8 @@ public class HashMapTest01 {
 		public int compare(Integer o1, Integer o2) {
 			// TODO Auto-generated method stub
 			
+//			return ((String)o1).compareTo((String)o2);
 			return 0;
-
 			// 오름차순 : o1 - o2
 			// 내림차순 : o2 - o1
 		}
