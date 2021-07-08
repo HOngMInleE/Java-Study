@@ -3,6 +3,7 @@ package student;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ public class StudentManage {
 		
 		Connection conn = null;
 		PreparedStatement pst = null;
+		ResultSet rs = null;
 		
 		int menu = 0;
 		int no = 0;
@@ -92,14 +94,102 @@ public class StudentManage {
 					Class.forName("oracle.jdbc.driver.OracleDriver");
 					conn = DriverManager.getConnection(url,id,pw);
 					sql = "select rownum, a.* from student a order by no desc";
+					pst = conn.prepareStatement(sql);
+					rs = pst.executeQuery();
+					
+					while(rs.next()) {
+						int row = rs.getRow();
+						no = rs.getInt(2);
+						name = rs.getString(3);
+						age = rs.getInt(4);
+						phone = rs.getString(5);
+						email = rs.getString(6);
+						
+						System.out.print("rm : " + row + "\t");
+						System.out.print("학생번호 : " + no+ "\t");
+						System.out.print("학생이름 : " + name + "\t");
+						System.out.print("학생나이 : " + age + "\t");
+						System.out.print("학생전화번호 : " + phone + "\t");
+						System.out.print("학생이메일 : " + email + "\t");
+						System.out.println();
+					} // while end
+					
 				} catch (ClassNotFoundException e) {
 					e.printStackTrace();
 				} catch (SQLException e) {
 					e.printStackTrace();
-				}
+				} finally {
+					try {
+						rs.close();
+						pst.close();
+						conn.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					} // catch end
+				} // finally end
 				
 				break;
 				
+			case 3:
+				System.out.println("학생이름을 입력하세요 : ");
+				search = sc.next();
+				
+				System.out.println("====" + search + " 정보 조회 ====");
+				try {
+					Class.forName("oracle.jdbc.driver.OracleDriver");
+					conn = DriverManager.getConnection(url,id,pw);
+					sql = "select rownum, a.* from student a where name = ?";
+
+					pst = conn.prepareStatement(sql);
+					pst.setString(1, search); // 없으면 오류 발생
+					
+					rs = pst.executeQuery();
+					boolean isList = false; 
+ 
+					while(rs.next()) {
+						int row = rs.getRow();
+						no = rs.getInt(2);
+						name = rs.getString(3);
+						age = rs.getInt(4);
+						phone = rs.getString(5);
+						email = rs.getString(6);
+						
+						System.out.print("rm : " + row + "\t");
+						System.out.print("학생번호 : " + no+ "\t");
+						System.out.print("학생이름 : " + name + "\t");
+						System.out.print("학생나이 : " + age + "\t");
+						System.out.print("학생전화번호 : " + phone + "\t");
+						System.out.print("학생이메일 : " + email + "\t");
+						System.out.println();
+						
+						isList = true;
+					}
+					
+					if (isList == false) {
+						System.out.println("검색된 학생이 없습니다.");
+					}
+				} catch (ClassNotFoundException e) {
+					e.printStackTrace();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				} finally {
+					try {
+						rs.close();
+						pst.close();
+						conn.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					} // catch end
+				} // finally end
+				
+				break;
+				
+			case 4:
+				
+				
+				break;
+				
+
 			} // switch end
 			
 		} // while end
