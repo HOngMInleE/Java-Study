@@ -356,8 +356,15 @@ public class StudentManage {
 				
 				break;
 				
-
+			case 6:
+				System.out.println("프로그램 종료");
+				System.exit(0); // 프로그램 강제 종료 while문 break 하지 않아도 됨.
+				break;
 			} // switch end
+		
+			if (menu == 6) {
+				break;
+			}
 			
 		} // while end
 		
